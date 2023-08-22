@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Nicholas Saroiu</title>
+
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+
+</head>
+
+
+<body>
+
+    <script src="https://kit.fontawesome.com/584e946e34.js" crossorigin="anonymous"></script>
+
+    <div class='navbar-wrapper disable-scrolling'>
+        <image src='../images/pfp.png' id='pfp'>
+            
+            <p id='navbar-name'>Nicholas Saroiu</p>
+        
+            <p>CS Undergrad<br> 
+            at the<br>
+            University of Toronto</p>
+            
+            <div class='navbar-icons-wrapper'>
+                <a href='https://github.com/nsaroiu' target='_blank' class='navbar-icon-link'><i class="fa fa-github fa-2xl navbar-icon"></i></a>
+                <a href='https://www.linkedin.com/in/nicholas-saroiu-08732b218/' target='_blank' class='navbar-icon-link'><i class="fa fa-linkedin-square fa-2xl navbar-icon"></i></a>
+                <a href='https://www.instagram.com/nicksaroiu/' target='_blank' class='navbar-icon-link'><i class="fa fa-instagram fa-2xl navbar-icon"></i></a>
+            </div>
+            
+            <div id='navbar-hr-wrapper'><hr id='navbar-hr'></div>
+            
+        <div class='navbar-links-wrapper'>
+            <h6 class='navbar-link'><a href='../index.html' class='a-navbar-link'>Home</a></h6>
+            <h6 class='navbar-current'>Projects</h6>
+            <h6 class='navbar-link'><a href='../files/nicholas_saroiu_resume.pdf' class='a-navbar-link' target="_blank" rel="noreferrer noopener">Resume</a></h6>
+            <h6 class='navbar-link'><a href='./contact.html' class='a-navbar-link'>Contact</a></h6>
+        </div>
+            
+        <div class='navbar-footer'>
+            <p id='navbar-footer-text'>Last Updated Aug 2023 by Nicholas Saroiu</p>
+        </div>
+    </div>
+
+    <div class="main-body-wrapper">
+        <div class="main-body">
+            <div class="title-wrapper">
+                <h1 id="title">Projects</h1>
+            </div>
+
+
+            <div class="main-hr-wrapper"><hr class="main-hr"></div>
+
+
+            <h2 class="section-title">Current Project</h2>
+
+            <p>
+                I am currently working on a project that will allow UofT students to create a calendar of their enrolled courses, 
+                and then export it directly to Google Calendar. The project will import the user's enrolled course list from Acorn, 
+                either by automatically pulling the list directly from Acorn, or by asking users to upload a .ics file that Acorn generates. 
+                The project will then allow users to change various settings and format their calendar to their liking. When the user is 
+                satisfied, the project will export the calendar directly to a connected Google account.
+            </p>
+
+
+            <h2 class="section-title"><span id="niniboard-v1">Niniboard V1</span></h2>
+
+            <p>
+                In July of 2023, I began working on designing a new one-handed keyboard from scratch. I had already built the Niniergo Split keyboard (see below), 
+                but rather than routing a custom PCB to  wire the keyboard, I decided to create a model for a case in Fusion360, a CAD software, and 3d print the case. 
+                Afterwards, I handwired the entire keyboard, eliminating the need for a PCB. I wrote the firmware for the keyboard using 
+                <a href="https://zmk.dev/" target="_blank" rel="noreferrer noopener"><u>ZMK</u></a>.
+            </p>
+
+            <div class="photo-wrapper">
+                <img src="../images/niniboard_v1.png" id="niniboardv1-photo" class="photo">
+                <p class="photo-caption">Finished Niniboard V1.</p>
+            </div>
+
+
+            <h2 class="section-title"><i>Guess Who?</i> Decision Tree Bots</h2>
+
+            <p>
+                During early 2023, I teamed up with a friend to build a bot that was capable of consistently winning games of the popular children's game 
+                <a href="https://en.wikipedia.org/wiki/Guess_Who%3F" target="_blank" rel="noreferrer noopener"><u><i>Guess Who?</i></u></a>. Our approach was 
+                to build a strategically optimal decision tree where the bot would be given a list of various character attributes that it could ask its opponent about. 
+                We decided to build five different decision trees using the following decision tree algorithms: ID3, CART, C4.5, Chi-Square Automatic Interaction Detection, 
+                and Reduction in Variation. We then built a UI where a human could play against any decision tree generated.
+            </p>
+
+            <p>
+                Since we built multiple decision trees using different algorithms, we were also able to compare the performance of each decision tree algorithm. We decided to 
+                modify our UI to allow a human to have each algorithm run multiple simulations, and present the results of those simulations as well as various statistics 
+                in a bar graph. You can find our project <a href="https://github.com/nsaroiu/GuessWho" target="_blank" rel="noreferrer noopener"><u>here</u></a>. 
+            </p>
+
+
+            <h2 class="section-title"><span id="showcased-project">Niniergo Split</span></h2>
+
+            <p>
+                During the summer of 2022, I decided to design a custom ergonomic keyboard molded specifically for my hand, which I called the 
+                "Niniergo Split." I used <a href="https://ergogen.cache.works/" target="_blank" rel="noreferrer noopener"><u>Ergogen</u></a>, 
+                a utility that allows you to generate a custom keyboard layout, in order to produce a rough sketch of a pcb. I decided to generate 
+                a 36-key split-board layout, and designed a pcb using 
+                <a href="https://www.kicad.org/" target="_blank" rel="noreferrer noopener"><u>KiCAD</u></a>. For the microcontroller, I 
+                chose to use a nice!nano chip, which would allow the keyboard to be bluetooth, and wrote the firmware using 
+                <a href="https://zmk.dev/" target="_blank" rel="noreferrer noopener"><u>ZMK</u></a>. 
+
+                <!-- You can check out the firmware <a href="https://github.com/nsaroiu/zmk" target="_blank" rel="noreferrer noopener"><u>here</u></a>. -->
+            </p>
+
+            <div class="photo-wrapper">
+                <img src="../images/niniergo_kicad.png" id="niniergo-photo" class="photo">
+                <p class="photo-caption">Gerber File for Niniergo Split.</p>
+            </div>
+
+
+            <h2 class="section-title">Controlling LED Strip with Webserver</h2>
+
+            <p>
+                In December of 2020, my friend and I began a project that would allow us to control the color of a strip of LEDs. Our plan was to 
+                connect a strip of WS2812B LEDs to an Arduino, which was connected to a Raspberry Pi. We would host a frontend and backend server on 
+                the Raspberry Pi, which would take a list of rgb values from the user and feed it to the LED strip via the Arduino.
+            </p>
+
+            <p>
+                While my friend focused on building the frontend for our project, I focused on building the backend. I built a web server that would wait 
+                for a list of rgb values from the frontend. Once received, the server would send the rgb values to the Arduino through a serial port on the 
+                Raspberry Pi, and the LED strip would then display the associated colors. You can check out the project 
+                <a href="https://github.com/nsaroiu/LED_Strip_Backend" target="_blank" rel="noreferrer noopener"><u>here</u></a>.
+            </p>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

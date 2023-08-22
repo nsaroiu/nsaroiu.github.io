@@ -1,0 +1,201 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #444444;
+}
+
+/* NAVBAR STYLES */
+
+.disable-scrolling {
+	overflow: hidden;
+}
+
+.navbar-wrapper {
+	position: fixed;
+	
+	text-align: center;
+	
+	background-color: #eeeeee;
+	
+	top: 0;
+	left: 0;
+	right: 82.5%;
+	bottom:0;
+	
+	padding-top: 2%;
+}
+
+#pfp {
+	width: 60%;
+	border-radius: 15%;
+}
+
+#navbar-name {
+	font-size: 32px;
+}
+
+.navbar-icons-wrapper {
+	padding-top: 3%;
+}
+
+.navbar-icon-link {
+	color: inherit;
+}
+
+.navbar-icon:hover {
+	color: #000000;
+	transition: 250ms;
+}
+
+#navbar-hr-wrapper {
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+
+#navbar-hr {
+	width: 70%;
+	margin: auto;
+}
+
+.navbar-links-wrapper {
+	padding-top: 3%;
+}
+
+.navbar-current {
+	margin: 2%;
+	font-size: 16px;
+	padding: 1px;
+	color: #000000;
+}
+
+.navbar-link {
+	margin: 2%;
+	font-size: 16px;
+	padding: 1px;
+	font-weight: lighter;
+	
+	
+}
+
+.navbar-link:hover {
+	color: #000000;
+
+	transition-duration: 250ms;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.navbar-footer {
+	position: fixed;
+	bottom: 5px;
+	width: 17.5%;
+}
+
+#navbar-footer-text {
+	font-size: 10px;
+}
+
+/* MAIN PAGE STYLE  */
+
+.main-body-wrapper {
+	position: absolute;
+	
+	top: 0;
+	left:17.5%;
+	right:0;
+	bottom:0;
+
+}
+
+.main-body {
+	margin-left: 5%;
+	margin-right: 5%;
+	
+	padding-bottom: 5%;
+} 
+
+p {
+	line-height: 150%;
+}
+
+#title {
+	font-size: 45px;
+	font-weight: lighter;
+}
+
+.title-wrapper {
+	padding-top: 2%;
+
+	margin-bottom: 40px;
+}
+
+#title-intro {
+	padding-bottom: 25px;
+}
+
+.main-hr-wrapper {
+	width: 45%;
+	position: relative;
+}
+
+.section-title {
+	font-weight: lighter;
+	padding-top: 25px;
+}
+
+.titleless-text {
+	padding-top: 25px;
+}
+
+@keyframes highlightDisappear {
+	0% {
+		background-color: #fbff00;
+	}
+	100% {
+		background-color: transparent;
+	}
+}
+
+#showcased-project:target {
+	padding:0.1em 0em;
+
+	animation: 1s ease-out 0s 1 highlightDisappear;
+}
+
+#niniboard-v1:target {
+	padding:0.1em 0em;
+
+	animation: 1s ease-out 0s 1 highlightDisappear;
+}
+
+.photo-wrapper {
+	position: relative;
+	text-align: center;
+
+	padding-top: 30px;
+}
+
+.photo {
+	border-radius: 15px;
+}
+
+#showcased-photo {
+	width: 32.5%;
+}
+
+#niniergo-photo {
+	width: 40%;
+}
+
+#niniboardv1-photo {
+	width: 40%;
+}
+
+.photo-caption {
+	margin: auto;
+	font-size: 11px;
+}
+
+
