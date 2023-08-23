@@ -31,6 +31,14 @@ body {
 
 #navbar-name {
 	font-size: 32px;
+
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#navbar-description {
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .navbar-icons-wrapper {
@@ -91,6 +99,7 @@ a {
 	position: fixed;
 	bottom: 5px;
 	width: 17.5%;
+
 }
 
 #navbar-footer-text {
@@ -117,6 +126,10 @@ a {
 } 
 
 p {
+	line-height: 150%;
+}
+
+li {
 	line-height: 150%;
 }
 
@@ -198,4 +211,68 @@ p {
 	font-size: 11px;
 }
 
+
+/* RESIZING STYLES */
+
+@media (max-width: 800px) {
+
+	html, body { margin: 0; padding: 0;}
+
+	.disable-scrolling {
+		overflow: visible;
+	}
+  
+	.navbar-wrapper {
+		position: relative;
+		
+		text-align: center;
+		
+		background-color: #eeeeee;
+		
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		
+		padding-top: 10%;
+	}
+
+	.navbar-footer {
+		position: relative;
+		padding-top: 7%;
+		padding-bottom: 1%;
+		bottom: 5px;
+		width: 100%;
+	}
+
+	.main-body-wrapper {
+		position: relative;
+		
+		top: auto;
+		left:0;
+		right:0;
+		bottom:0; 
+
+		padding-bottom: 15%;
+	
+	}
+
+	.contacts-wrapper {
+		padding-bottom: 100%;
+	}
+
+	#showcased-photo {
+		width: 300px;
+	}
+	
+	#niniergo-photo {
+		width: 300px;
+	}
+	
+	#niniboardv1-photo {
+		width: 300px;
+	}
+  
+  }
+  
 
