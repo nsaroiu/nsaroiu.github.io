@@ -214,69 +214,8 @@ li {
 
 /* RESIZING STYLES */
 
-@media (max-width: 1250px) and (min-width: 800px) {
 
-	html, body { margin: 0; padding: 0;}
-
-	.disable-scrolling {
-		overflow: visible;
-	}
-  
-	.navbar-wrapper {
-		position: relative;
-		
-		text-align: center;
-		
-		background-color: #eeeeee;
-		
-		top: auto;
-		left: auto;
-		right: auto;
-		bottom: auto;
-		
-		padding-top: 10%;
-	}
-
-	.navbar-footer {
-		position: relative;
-		padding-top: 7%;
-		padding-bottom: 1%;
-		bottom: 5px;
-		width: 100%;
-	}
-
-	.main-body-wrapper {
-		position: relative;
-		
-		top: auto;
-		left:0;
-		right:0;
-		bottom:0; 
-
-		padding-bottom: 15%;
-	
-	}
-
-	.contacts-wrapper {
-		padding-bottom: 100%;
-	}
-
-	#showcased-photo {
-		width: 65%;
-	}
-	
-	#niniergo-photo {
-		width: 65%;
-	}
-	
-	#niniboardv1-photo {
-		width: 65%;
-	}
-  
-  }
-
-
-  @media (max-width: 800px) {
+@media (max-width: 800px) {
 
 	html, body { margin: 0; padding: 0;}
 
@@ -338,7 +277,7 @@ li {
 	#niniboardv1-photo {
 		width: 300px;
 	}
-  
-  }
+
+}
   
 
