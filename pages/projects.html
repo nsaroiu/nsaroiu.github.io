@@ -10,6 +10,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="../lastupdated.js"></script>
+
 </head>
 
 
@@ -42,7 +44,7 @@
         </div>
             
         <div class='navbar-footer'>
-            <p id='navbar-footer-text'>Last Updated Aug 2023 by Nicholas Saroiu</p>
+            <last-updated></last-updated>
         </div>
     </div>
 
@@ -56,12 +58,17 @@
             <div class="main-hr-wrapper"><hr class="main-hr"></div>
 
 
-            <h2 class="section-title">Current Project</h2>
+            <h2 class="section-title">TTC Tracker</h2>
 
             <p>
-                I am currently working on building an IOS app to display real-time wait time estimates for Toronto TTC users. Users will be prompted to choose which station 
-                they are at, at which point the app will find all routes passing through the given station, and estimate the wait time for each route. The project will pull 
-                live data directly from the TTC's open feed, and display it on a map using Apple's MapKit API.
+                During the fall of 2023, I worked on a project with three colleagues to build a web application that would allow users to view Toronto Transit 
+                Commission (TTC) stops, routes, and vehicles in real time, as well as calculate and offer arrival time predictions. We used the 
+                <a href="https://retro.umoiq.com/#!/ttc/7/7_1_7/14141" target="_blank" rel="noreferrer noopener"><u>Umoiq NextBus API</u></a> in order to collect 
+                real-time data from the TTC. We built a frontend using React.js and used the Google Maps API to display a map of Toronto for the user. We also built a 
+                backend using the Java Spring Boot framework to handle all business logic and data processing. In order to reduce latency, we decided to cache location data 
+                (such as stop locations, which are very unlikely to change) into csv files. In case our arrival time predictions fail, the backend defaults to TTC 
+                scheduled arrival times. You can check out our project 
+                <a href="https://github.com/nsaroiu/TTC-Tracker" target="_blank" rel="noreferrer noopener"><u>here</u></a>.
             </p>
 
 
