@@ -5,7 +5,7 @@ class LastUpdated extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-        <p id='navbar-footer-text'>Last Updated Aug 2024 by Nicholas Saroiu</p>
+        <p id='navbar-footer-text'>Last Updated Sep 2024 by Nicholas Saroiu</p>
         `;
     }
 }
