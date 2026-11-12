@@ -10,7 +10,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="../lastupdated.js"></script>
+    <script src="/lastupdated.js"></script>
+    <script src="/components/navbar.js"></script>
 
 </head>
 
@@ -19,34 +20,7 @@
 
     <script src="https://kit.fontawesome.com/584e946e34.js" crossorigin="anonymous"></script>
 
-    <div class='navbar-wrapper disable-scrolling'>
-        <image src='../images/pfp.jpg' id='pfp'>
-            
-            <p id='navbar-name'>Nicholas Saroiu</p>
-        
-            <p id="navbar-description">CS Undergrad<br> 
-            at the<br>
-            University of Toronto</p>
-            
-            <div class='navbar-icons-wrapper'>
-                <a href='https://github.com/nsaroiu' target='_blank' class='navbar-icon-link'><i class="fa fa-github fa-2xl navbar-icon"></i></a>
-                <a href='https://www.linkedin.com/in/nicholas-saroiu-08732b218/' target='_blank' class='navbar-icon-link'><i class="fa fa-linkedin-square fa-2xl navbar-icon"></i></a>
-                <a href='https://www.instagram.com/nicksaroiu/' target='_blank' class='navbar-icon-link'><i class="fa fa-instagram fa-2xl navbar-icon"></i></a>
-            </div>
-            
-            <div id='navbar-hr-wrapper'><hr id='navbar-hr'></div>
-            
-        <div class='navbar-links-wrapper'>
-            <h6 class='navbar-link'><a href='../index' class="a-navbar-link">Home</a></h6>
-            <h6 class='navbar-link'><a href='./projects' class="a-navbar-link">Projects</a></h6>
-            <h6 class='navbar-link'><a href='../files/nicholas_saroiu_resume.pdf' class='a-navbar-link' target="_blank" rel="noreferrer noopener">Resume</a></h6>
-            <h6 class='navbar-current'>Contact</h6>
-        </div>
-            
-        <div class='navbar-footer'>
-            <last-updated></last-updated>
-        </div>
-    </div>
+    <site-navbar current="contact"></site-navbar>
 
     <div class='main-body-wrapper contacts-wrapper'>
         <div class='main-body'>
