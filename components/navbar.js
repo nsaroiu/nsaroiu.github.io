@@ -27,8 +27,8 @@ class SiteNavbar extends HTMLElement {
 
             <p id='navbar-name'>Nicholas Saroiu</p>
 
-            <p id='navbar-description'>CS Undergrad<br>
-            at the<br>
+            <p id='navbar-description'>CS Graduate<br>
+            from the<br>
             University of Toronto</p>
 
             <div class='navbar-icons-wrapper'>

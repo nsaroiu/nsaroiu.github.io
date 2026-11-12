@@ -32,13 +32,56 @@
             <div class="main-hr-wrapper"><hr class="main-hr"></div>
 
 
+            <h2 class="section-title"><span id="showcased-project">MTG Deck Completion</span></h2>
+
+            <p>
+                MTG Deck Completion is an end-to-end recommender that completes 100-card Magic: The Gathering Commander decks from a
+                partial decklist. To train it, I collected and publicly released a dataset of 189K real decklists. I built a resumable,
+                rate-limited data pipeline on the <a href="https://moxfield.com/" target="_blank" rel="noreferrer noopener"><u>Moxfield</u></a> API that samples decks
+                across 2,400 commanders in popularity tiers, so less popular commanders are still well represented.
+            </p>
+
+            <p>
+                Each of the 32K cards is tokenized by combining a learned ID, structured card features, and a sentence-transformer
+                embedding of its rules text. I trained DeepSets and Set Transformer models on masked set prediction and ensembled them
+                with a deck-pruning model. Rebalancing the training data raised long-tail MRR on unseen commanders by 7&times;.
+            </p>
+
+            <p>
+                The app has a FastAPI backend and a React/TypeScript frontend, deployed to Hugging Face Spaces, and GitHub Actions tests
+                each model release before it is deployed. You can try the
+                <a href="https://nsaroiu-mtg-deck-completion.hf.space/" target="_blank" rel="noreferrer noopener"><u>live demo</u></a>
+                or check out the code <a href="https://github.com/nsaroiu/mtg-deck-completion" target="_blank" rel="noreferrer noopener"><u>here</u></a>.
+            </p>
+
+
+            <h2 class="section-title">Causal Tracing for Transformer Interpretability</h2>
+
+            <p>
+                In this project, I reproduced the core experiments of the NeurIPS 2022 paper
+                <a href="https://arxiv.org/abs/2202.05262" target="_blank" rel="noreferrer noopener"><u><i>Locating and Editing Factual Associations in GPT</i></u></a>
+                (ROME) in PyTorch. Using causal tracing, I located where GPT-2 Small, Medium, Large, and XL store factual
+                associations: I corrupted the model's inputs, then restored individual hidden states to see which ones recover the
+                correct prediction.
+            </p>
+
+
+            <h2 class="section-title">Models to Predict Student Accuracy</h2>
+
+            <p>
+                I compared K-Nearest Neighbors, Item-Response Theory, and autoencoder models for predicting whether a student would answer
+                a question correctly, using PyTorch and scikit-learn. By combining the models in an ensemble and tuning them with
+                cross-validation, I reached 70% validation accuracy.
+            </p>
+
+
             <h2 class="section-title">Patient Portal Backend</h2>
 
             <p>
-                In May of 2024, a family member reached out in need of a CRUD backend to support a database of dental patients. The frontend was already implemented, 
-                so I was tasked with implementing the endpoints that the frontend used. I decided to use the 
-                <a href="https://www.django-rest-framework.org/" target="_blank" rel="noreferrer noopener"><u>Django REST Framework</u></a> in order to build the backend. I chose 
-                to use Django both because of quick setup time as well as easy to implement authentication. 
+                In May of 2024, a family member reached out in need of a backend for a dental patient-management system. The frontend was
+                already implemented, so I was tasked with implementing the endpoints that the frontend used. I built the API with the
+                <a href="https://www.django-rest-framework.org/" target="_blank" rel="noreferrer noopener"><u>Django REST Framework</u></a> and PostgreSQL, and designed it
+                with HIPAA privacy requirements in mind: users authenticate with JWTs, and sensitive patient records are encrypted.
             </p>
 
 
@@ -46,15 +89,18 @@
 
             <p>
                 During the fall of 2023, I worked on a project with three colleagues to build a web application that would allow users to view Toronto Transit 
-                Commission (TTC) stops, routes, and vehicles in real time, as well as calculate and offer arrival time predictions. We used the 
-                <a href="https://retro.umoiq.com/#!/ttc/7/7_1_7/14141" target="_blank" rel="noreferrer noopener"><u>Umoiq NextBus API</u></a> in order to collect 
-                real-time data from the TTC. We built a frontend using React.js and used the Google Maps API to display a map of Toronto for the user. We also built a 
-                backend using the Java Spring Boot framework to handle all business logic and data processing. In order to reduce latency, we decided to cache location data 
+                Commission (TTC) stops, routes, and vehicles in real time, as well as calculate and offer arrival time predictions. We built a frontend using
+                React.js and used the Google Maps API to display a live map of Toronto. We also built a backend using the Java Spring Boot framework, designed
+                around SOLID principles, which ingests and processes the TTC's GTFS real-time data feeds. In order to reduce latency, we decided to cache location data 
                 (such as stop locations, which are very unlikely to change) into csv files. In case our arrival time predictions fail, the backend defaults to TTC 
                 scheduled arrival times. You can check out our project 
                 <a href="https://github.com/nsaroiu/TTC-Tracker" target="_blank" rel="noreferrer noopener"><u>here</u></a>.
             </p>
 
+
+            <div class="main-hr-wrapper group-divider"><hr class="main-hr"></div>
+
+            <h1 class="group-title">Other Projects</h1>
 
             <h2 class="section-title"><span id="niniboard-v1">Niniboard V1</span></h2>
 
@@ -88,7 +134,7 @@
             </p>
 
 
-            <h2 class="section-title"><span id="showcased-project">Niniergo Split</span></h2>
+            <h2 class="section-title">Niniergo Split</h2>
 
             <p>
                 During the summer of 2022, I decided to design a custom ergonomic keyboard molded specifically for my hand, which I called the 
@@ -106,23 +152,6 @@
                 <img src="../images/niniergo_kicad.jpg" id="niniergo-photo" class="photo">
                 <p class="photo-caption">Gerber File for Niniergo Split.</p>
             </div>
-
-
-            <h2 class="section-title">Controlling LED Strip with Webserver</h2>
-
-            <p>
-                In December of 2020, my friend and I began a project that would allow us to control the color of a strip of LEDs. Our plan was to 
-                connect a strip of WS2812B LEDs to an Arduino, which was connected to a Raspberry Pi. We would host a frontend and backend server on 
-                the Raspberry Pi, which would take a list of rgb values from the user and feed it to the LED strip via the Arduino.
-            </p>
-
-            <p>
-                While my friend focused on building the frontend for our project, I focused on building the backend. I built a web server that would wait 
-                for a list of rgb values from the frontend. Once received, the server would send the rgb values to the Arduino through a serial port on the 
-                Raspberry Pi, and the LED strip would then display the associated colors. You can check out the project 
-                <a href="https://github.com/nsaroiu/LED_Strip_Backend" target="_blank" rel="noreferrer noopener"><u>here</u></a>.
-            </p>
-
 
         </div>
     </div>
